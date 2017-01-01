@@ -2,25 +2,24 @@ This is a punch IN/OUT program designed to keep track of people entering in
 or out of a building. It's meant to be used with an ID card with two 
 barcodes that have the persons full name with "IN/OUT" at the end as a
 string. The program saves all the files as .txt files so it should work 
-with any windows machine that has python 2.7 installed.
-
-
-Python 2.7 must be installed on your machine!
+with any windows machine that has python installed.
 
 
 Setup:
 
-	1.Create/find the folders you'd like to keep all the files in.
+  1.Install the python "future" library via pip.
+
+  2.Create/find the folders you'd like to keep all the files in.
 	
-	2.Move "punchout.py","punchoutclasses.py","SETTINGS.txt", and
+	3.Move "punchout.py","punchoutclasses.py","SETTINGS.txt", and
 	"LIVE LIST.txt" into the folder.
 	
-	3.Open the "SETTINGS.txt" file and change the directories to the ones
+	4.Open the "SETTINGS.txt" file and change the directories to the ones
 	on your computer that you will be using. You can also change the file 
 	type and time it takes for a check in to expire. But default settings
 	are fine for that. Save the file and close it.
 
-	4.Run the "punchout.py" file in the same folder as "SETTINGS.txt"
+	5.Run the "punchout.py" file in the same folder as "SETTINGS.txt"
 	and viola!
 
 

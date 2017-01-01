@@ -1,3 +1,8 @@
+# Python 2/3 compatibility
+from __future__ import (absolute_import, division,
+                        print_function, unicode_literals)
+from builtins import *
+
 import os
 from punchoutclasses import *
 
@@ -64,13 +69,13 @@ def print_logs(some_logs, settings):
                  normalize_string("CHECKED", 0, 10)
                  )
     print_spaces(2)
-    print normalize_string(top_field, 4, 72)
-    print normalize_string(("-" * 72), 4, 72)
+    print(normalize_string(top_field, 4, 72))
+    print(normalize_string(("-" * 72), 4, 72))
     for log in some_logs:
-        print normalize_string(create_log_string(log), 4, 72)
-    print normalize_string(("-" * 72), 4, 72)
-    print normalize_string((num_people + " TOTAL IN"), 59, 16)
-    print normalize_string(("-" * 72), 4, 72)
+        print(normalize_string(create_log_string(log), 4, 72))
+    print(normalize_string(("-" * 72), 4, 72))
+    print(normalize_string((num_people + " TOTAL IN"), 59, 16))
+    print(normalize_string(("-" * 72), 4, 72))
     print_spaces(2)
 
 
@@ -88,7 +93,7 @@ def normalize_string(a_string, int_space, max_length):
 def print_spaces(num):
     count = 0
     while count < num:
-        print ""
+        print("")
         count = count + 1
 
 
@@ -101,7 +106,7 @@ def input_prompt(in_building, settings):
     mode_changed = normalize_string("MODE CHANGED", 4, 72)
     report = error
     while True:
-        an_input = raw_input("    SCAN ID CARD: ")
+        an_input = input("    SCAN ID CARD: ")
         an_input = an_input.upper()
         if "MODE" == an_input:
             settings.change_mode()
@@ -116,7 +121,7 @@ def input_prompt(in_building, settings):
                 return person
         clear_console_screen()
         print_logs(in_building, settings)
-        print report
+        print(report)
         report = error
 
 
